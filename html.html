@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet.ru</title>
+  <link rel="stylesheet" href="css.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h2 class="logo">Meet.ru</h2>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="section" id="nav-links">
+      <a href="#"><button>About</button></a>
+      <a href="#"><button>Messages</button></a>
+      <a href="#"><button>Contacts</button></a>
+      <button id="open-login">Log In</button>
+      <button id="open-signup">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close-btn" data-close="login-modal">&times;</span>
+      <h2>Sign In to Meet.ru</h2>
+      <form id="signup-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+        <p class="signup-link">Don't have an account? <a href="#" id="switch-to-signup">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIGNUP MODAL -->
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
+      <span class="close-btn" data-close="signup-modal">&times;</span>
+      <h2>Create Your Account</h2>
+      <form id="signup-form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" name="signup-password" placeholder="Password" required />
+        <input type="password" name="confirm-password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+        <p class="signup-link">Already have an account? <a href="#" id="switch-to-login">Log in here</a></p>
+      </form>
+    </div>
+  </div>
+
+<div class="about">
+  <h2>What is the purpose of this app !</h2>
+  <p>Meet.ru is designed to help people find meaningful connections and relationships, with a focus on simplicity, privacy, and love.</p>
+</div>
+
+<section class="faq-section">
+  <h2>Common Questions 💬</h2>
+
+  <div class="faq">
+    <button class="faq-question">Is Meet.ru free to use?</button>
+    <div class="faq-answer">
+      <p>Yes! You can create a profile, match, and chat for free. Some advanced features may require a subscription.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">How do I reset my password?</button>
+    <div class="faq-answer">
+      <p>You can reset your password by clicking “Forgot Password” on the login page and following the instructions.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">Can I delete or deactivate my account?</button>
+    <div class="faq-answer">
+      <p>Yes. Go to Settings → Account and choose to deactivate or permanently delete your account anytime.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">Is my personal information safe?</button>
+    <div class="faq-answer">
+      <p>Absolutely. We prioritize your privacy and use end-to-end encryption and secure servers to protect your data.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">How do I report a suspicious user?</button>
+    <div class="faq-answer">
+      <p>On any profile or chat, click the "Report" icon and describe the issue. Our team will review it immediately.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">What makes Meet.ru different?</button>
+    <div class="faq-answer">
+      <p>We focus on meaningful connections, honest profiles, and a fun, love-friendly design that respects your time.</p>
+    </div>
+  </div>
+</section>
+  
+
+<section class="feedback-section">
+  <div class="circle-container">
+    <div class="circle-shape">
+      <div class="circle-content">
+        <h2 class="feedback-title">We Love Your Feedback ❤️</h2>
+        <p class="feedback-desc">Tell us what's on your heart. We listen, we care, we evolve.</p>
+
+        <form class="feedback-form">
+          <textarea placeholder="Leave your comment or complaint..." required></textarea>
+          <button type="submit">Send 💖</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+ <section class="age-category-section">
+  <div class="age-container">
+    <h2 class="age-title">Choose Your Age Group 💫</h2>
+    <form class="age-form" id="age-form">
+      <label><input type="radio" name="age" value="13-17" required /> 13–17</label>
+      <label><input type="radio" name="age" value="18-24" /> 18–24</label>
+      <label><input type="radio" name="age" value="25-34" /> 25–34</label>
+      <label><input type="radio" name="age" value="35-44" /> 35–44</label>
+      <label><input type="radio" name="age" value="45+" /> 45+</label>
+      <button type="button" id="age-continue-btn">Continue ❤️</button>
+    </form>
+  </div>
+</section>
+
+<section class="carousel-section">
+  <h2 class="carousel-title">People Looking for Love 💘</h2>
+  <div class="carousel-container">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-track-inner">
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Alex" />
+          <h3>Alex, 25</h3>
+          <p>"Let's talk over coffee!"</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara" />
+          <h3>Sara, 22</h3>
+          <p>"Love hiking and music."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="John" />
+          <h3>John, 30</h3>
+          <p>"Looking for something real."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Emma" />
+          <h3>Emma, 27</h3>
+          <p>"Adventurous and kind."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Leo" />
+          <h3>Leo, 23</h3>
+          <p>"Let’s create a story."</p>
+        </div>
+        <!-- Duplicate for seamless looping -->
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Alex" />
+          <h3>Alex, 25</h3>
+          <p>"Let's talk over coffee!"</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara" />
+          <h3>Sara, 22</h3>
+          <p>"Love hiking and music."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="John" />
+          <h3>John, 30</h3>
+          <p>"Looking for something real."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Emma" />
+          <h3>Emma, 27</h3>
+          <p>"Adventurous and kind."</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Leo" />
+          <h3>Leo, 23</h3>
+          <p>"Let’s create a story."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="website-comments">
+  <h2 class="comment-title">What Do You Think About Meet.ru?</h2>
+  <div class="comment-box">
+    <textarea placeholder="Share your thoughts..." required></textarea>
+    <button class="comment-btn">Post Comment 💬</button>
+  </div>
+</section>
+
+<section class="donation-section">
+  <div class="donation-container">
+    <h2 class="donation-title">Support the Love Movement 💞</h2>
+    <p class="donation-text">Your generosity helps us connect hearts around the world.</p>
+    <form class="donation-form">
+      <input type="number" placeholder="Enter donation amount ($)" required />
+      <button type="submit">Donate Now 💖</button>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <h3>Meet.ru ❤️</h3>
+    <p>Connecting hearts, one swipe at a time.</p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" class="icon instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="icon youtube" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://tiktok.com" target="_blank" class="icon tiktok" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+    <p class="copyright">© 2025 Meet.ru. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- JavaScript -->
+  <script src="javascipt.js"></script>
+</body>
+</html>
